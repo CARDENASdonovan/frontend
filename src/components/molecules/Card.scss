@@ -1,0 +1,24 @@
+.card {
+  margin: 1rem;
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 0.5rem;
+  background-color: var(--accent);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--fg);
+  }
+}

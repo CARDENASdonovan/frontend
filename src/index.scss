@@ -1,0 +1,160 @@
+// Global typography
+$font-family:
+  Inter,
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+// Light mode color variables
+$light-bg: #ffffff;
+$light-bg-elevated: #323b68;
+$light-bg-header: #323b68;
+$light-primary-text: #262626;
+$light-primary-text-unable: #51607a;
+$light-accent: #185b59;
+$light-accent-hover: #1847b7;
+$light-button-bg: #142033;
+$light-button-fg: #ffffff;
+$light-border: transparent;
+
+// Dark mode color palette reference
+// dark green 11646F
+// light green 25B390
+// light purple 584C70
+// dark purple 312C3E
+// light pink FDE6F6
+// dark pink D2A1C4
+// light skin color FAE8E1
+// dark skin color E0B7A2
+// light blue skirt 7296EF
+// dark blue skirt 2C47BD
+// blue shadow skirt 3247A8
+// light red skirt A01A4D
+// dark red skirt 84113E
+// black 2C2D29
+// light blue blazer 252C62
+// dark blue blazer 151A35
+// dark eyes green 022A2E
+// dark 2 eyes green 0A5359
+// bright eyes green 1BAEA1
+// bright 2 eyes green 99EDCA
+// dark yellow D5C541
+// light yellow FFFFCF
+// shirt shadow C6D6F2
+
+// Dark mode color variables
+$dark-bg: #312c3e;
+$dark-fg: #252c62;
+$dark-bg-elevated: #323b68;
+$dark-primary-text: #2c2d29;
+$dark-primary-text-unable: #7f8082;
+$dark-accent: #252c62;
+$dark-accent-hover: #151a35;
+$dark-button-bg: #142033;
+$dark-button-fg: #ffffff;
+
+// Mixin for dark mode
+@mixin dark-mode {
+  :root[data-theme="dark"] & {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+// Light mode (default)
+:root {
+  --bg: #{$light-bg};
+  --bg-elevated: #{$light-bg-elevated};
+  --bg-header: #{$light-bg-header};
+  --fg: #{$light-primary-text};
+  --primary-text: #{$light-primary-text};
+  --primary-text-unable: #{$light-primary-text-unable};
+  --accent: #{$light-accent};
+  --accent-hover: #{$light-accent-hover};
+  --button-bg: #{$light-button-bg};
+  --button-fg: #{$light-button-fg};
+  --border: #{$light-border};
+  font-family: $font-family;
+}
+
+// Dark mode
+:root[data-theme="dark"] {
+  --bg: #{$dark-bg};
+  --bg-elevated: #{$dark-bg-elevated};
+  --fg: #{$dark-fg};
+  --primary-text: #{$dark-primary-text};
+  --primary-text-unable: #{$dark-primary-text-unable};
+  --accent: #{$dark-accent};
+  --accent-hover: #{$dark-accent-hover};
+  --button-bg: #{$dark-button-bg};
+  --button-fg: #{$dark-button-fg};
+  font-family: $font-family;
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: inherit;
+
+  &:hover {
+    color: var(--accent-hover);
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-bg);
+  color: var(--button-fg);
+  cursor: pointer;
+  transition:
+    border-color 0.25s,
+    background-color 0.25s,
+    color 0.25s;
+
+  &:hover {
+    border-color: var(--accent);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}

@@ -1,0 +1,57 @@
+.main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .title-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    form {
+      input {
+        outline: none;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 9999px;
+        border: 1px solid #d1d5db;
+        font-size: 1rem;
+        transition: all 0.25s ease;
+
+        &:focus {
+          border-color: var(--accent);
+          box-shadow: 0 0 0 3px rgba(24, 91, 89, 0.1);
+        }
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+    }
+
+    .user-info {
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: all 0.25s ease;
+
+      &:hover {
+        text-decoration: underline;
+        color: #1d4ed8;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.exchange-rate-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  h2 {
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  p {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .chart-container {
+    width: 100%;
+  }
+}
