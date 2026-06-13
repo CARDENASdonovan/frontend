@@ -1,5 +1,5 @@
-import Chart from "src/components/molecules/Chart";
-import { AssetsData } from "src/components/pages/LandingPage";
+import Chart from "@/components/molecules/Chart";
+import { AssetsData } from "@/components/pages/LandingPage";
 import "./ExchangeRateCard.scss";
 
 export interface ExchangeRateCardProps {

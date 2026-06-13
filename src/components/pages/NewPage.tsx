@@ -1,5 +1,6 @@
-import Header from "components/organisms/Header";
-import { Card } from "../molecules/Card";
+import { Card } from "@/components/molecules/Card";
+import Header from "@/components/organisms/Header";
+
 import "./NewPage.scss";
 
 export const NewPage = (): React.ReactElement => {

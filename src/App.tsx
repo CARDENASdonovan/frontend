@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from "components/pages//LandingPage.tsx";
-import LoginForm from "components/pages/LoginForm.tsx";
-import RegisterForm from "components/pages/RegisterForm.tsx";
-import TransactionPage from "components/pages/TransactionPage.tsx";
-import { NewPage } from "./components/pages/NewPage";
+
+import LandingPage from "@/components/pages/LandingPage";
+import LoginForm from "@/components/pages/LoginForm";
+import { NewPage } from "@/components/pages/NewPage";
+import TransactionPage from "@/components/pages/TransactionPage";
 
 interface LandingPageProps {
   demo: boolean;
@@ -25,7 +25,6 @@ export default function App() {
           element={<LandingPage {...landingPageProdProps} />}
         />
         <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={<RegisterForm />} />
         <Route path="/transaction" element={<TransactionPage />} />
         <Route path="/" element={<NewPage />} />
       </Routes>

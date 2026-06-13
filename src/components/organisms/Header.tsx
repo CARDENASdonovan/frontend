@@ -1,4 +1,5 @@
-import cyStonksLogo from "assets/cy_stonks_logo.png";
+import cyStonksLogo from "@/assets/cy_stonks_logo.png";
+
 import "./Header.scss";
 
 const Logo = (): React.ReactElement => {
