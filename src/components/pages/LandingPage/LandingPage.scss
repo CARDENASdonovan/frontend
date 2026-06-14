@@ -1,12 +1,21 @@
-.new-page-container {
+.landing-page {
   display: flex;
   height: 100%;
   flex-direction: column;
 
   main {
     padding: 20px 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  }
+
+  .title-container {
+    text-align: center;
+  }
+
+  .card-list-container {
+    margin: 20px 5%;
+
+    @media (max-width: 768px) {
+      margin: 20px 0px;
+    }
   }
 }
