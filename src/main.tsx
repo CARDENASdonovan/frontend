@@ -1,7 +1,7 @@
+import { RoutesList } from "@/components/RoutesList";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.scss";
-import App from "./App";
+import "./main.scss";
 
 const colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -16,11 +16,11 @@ applySystemTheme();
 if (colorSchemeQuery.addEventListener) {
   colorSchemeQuery.addEventListener("change", applySystemTheme);
 } else {
-  colorSchemeQuery.addListener(applySystemTheme);
+  colorSchemeQuery.addEventListener("change", applySystemTheme);
 }
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <RoutesList />
   </StrictMode>
 );

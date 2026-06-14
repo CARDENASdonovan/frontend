@@ -1,0 +1,21 @@
+.card {
+  width: 100%;
+  min-width: 270px;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  background-color: var(--button);
+  padding: 20px 30px 20px 30px;
+  color: var(--secondary-text);
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: var(--button-hover);
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

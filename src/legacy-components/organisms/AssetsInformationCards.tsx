@@ -1,4 +1,4 @@
-import { AssetsData } from "@/components/pages/LandingPage";
+import { AssetsData } from "@/components/pages/LandingPage/LandingPage";
 
 export interface AssetsInformationCardsProps {
   assets: AssetsData[];

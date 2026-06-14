@@ -9,7 +9,6 @@ $font-family:
 
 // Light mode color variables
 $light-bg: #ffffff;
-$light-bg-elevated: #323b68;
 $light-bg-header: #323b68;
 $light-primary-text: #262626;
 $light-primary-text-unable: #51607a;
@@ -63,28 +62,24 @@ $light-border: transparent;
 // #B871D2
 
 $dark-bg: #fff;
-$dark-fg: #b871d2;
-$dark-bg-elevated: #323b68;
-$dark-primary-text: #682c7e;
-$dark-secondary-text: #fff;
-$dark-accent: #8838a5;
-$dark-button: #8838a5;
-$dark-button-hover: #b871d2;
-$dark-button-text: #fff;
-$dark-button-text-hover: #fff;
-
+$dark-fg: #333232;
+$dark-accent: #141414;
+$dark-primary-text: #{$dark-fg};
+$dark-secondary-text: #{$dark-bg};
+$dark-button: #{$dark-fg};
+$dark-button-hover: #{$dark-accent};
+$dark-button-text: #{$dark-bg};
+$dark-button-text-hover: #{$dark-bg};
 @mixin dark-mode {
   :root[data-theme="dark"] & {
     @content;
   }
 }
-
 html {
   background: var(--bg);
   color: var(--fg);
   color-scheme: light;
 }
-
 html[data-theme="dark"] {
   color-scheme: dark;
 }
@@ -92,7 +87,6 @@ html[data-theme="dark"] {
 // Light mode
 :root {
   --bg: #{$light-bg};
-  --bg-elevated: #{$light-bg-elevated};
   --bg-header: #{$light-bg-header};
   --fg: #{$light-primary-text};
   --primary-text: #{$light-primary-text};
@@ -106,7 +100,6 @@ html[data-theme="dark"] {
 // Dark mode
 :root[data-theme="dark"] {
   --bg: #{$dark-bg};
-  --bg-elevated: #{$dark-bg-elevated};
   --fg: #{$dark-fg};
   --primary-text: #{$dark-primary-text};
   --secondary-text: #{$dark-secondary-text};
@@ -128,6 +121,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--primary-text);
 
   &:hover {
     cursor: pointer;

@@ -3,15 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 70%,
-    rgb(136, 81, 142) 100%
-  );
+  background: var(--fg);
   cursor: pointer;
   text-align: center;
 
   .logo {
+    color: var(--secondary-text);
     width: 100%;
   }
 }
