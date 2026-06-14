@@ -1,5 +1,6 @@
-import { CardList } from "@/components/organisms/CardList/CardList";
-import { Header } from "@/components/organisms/Header/Header";
+import { ServiceList } from "@/components/organisms/ServiceList/ServiceList";
+import { VerticalPageLayout } from "@/components/page-layout/VerticalPageLayout/VerticalPageLayout";
+import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import "./LandingPage.scss";
 
@@ -7,19 +8,19 @@ export const LandingPage = (): ReactElement => {
   const { t } = useTranslation();
 
   return (
-    <div className="landing-page">
-      <Header />
-
-      <main>
-        <div className="title-container">
-          <h1>{t("welcome")}</h1>
-          <h2>{t("subtitle")}</h2>
-        </div>
-        <div className="card-list-container">
-          <CardList />
-        </div>
-      </main>
-    </div>
+    <VerticalPageLayout>
+      <div className="landing-page">
+        <main>
+          <div className="title-container">
+            <h1>{t("title")}</h1>
+            <h2>{t("subtitle")}</h2>
+          </div>
+          <div className="card-list-container">
+            <ServiceList />
+          </div>
+        </main>
+      </div>
+    </VerticalPageLayout>
   );
 };
 

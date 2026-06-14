@@ -1,4 +1,4 @@
-import { Card } from "@/components/molecules/Card/Card";
+import { Card } from "@/components/atoms/Card/Card";
 import "./CardList.scss";
 
 export const CardList = (): ReactElement => {

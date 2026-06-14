@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import "./NavigationMenu.scss";
 
 export const NavigationMenu = (): ReactElement => {

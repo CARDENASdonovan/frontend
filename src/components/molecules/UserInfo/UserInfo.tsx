@@ -1,4 +1,5 @@
 import { Button } from "@/components/atoms/Button/Button";
+import { ReactElement } from "react";
 import "./UserInfo.scss";
 
 interface UserInfoContentProps {

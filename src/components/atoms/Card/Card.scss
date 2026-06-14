@@ -1,4 +1,6 @@
 .card {
+  $displayed-lines-quantity-max: 3;
+
   width: 100%;
   min-width: 270px;
   box-sizing: border-box;
@@ -12,9 +14,14 @@
     background-color: var(--button-hover);
   }
 
+  a {
+    color: var(--secondary-text);
+  }
+
   .multiline-ellipsis {
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Number of lines to show */
+    line-clamp: $displayed-lines-quantity-max;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;

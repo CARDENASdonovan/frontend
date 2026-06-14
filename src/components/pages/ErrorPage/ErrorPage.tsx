@@ -1,3 +1,5 @@
+import { VerticalPageLayout } from "@/components/page-layout/VerticalPageLayout/VerticalPageLayout";
+import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import "./ErrorPage.scss";
 
@@ -8,8 +10,10 @@ interface ErrorPageProps {
 export const ErrorPage = ({ message }: ErrorPageProps): ReactElement => {
   const { t } = useTranslation();
   return (
-    <div className="error-screen">
-      <h2>{t("message", { replace: { message } })}</h2>
-    </div>
+    <VerticalPageLayout>
+      <div className="error-screen">
+        <main>{t(message)}</main>
+      </div>
+    </VerticalPageLayout>
   );
 };

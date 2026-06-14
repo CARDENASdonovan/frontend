@@ -12,13 +12,10 @@
   font-weight: bold;
   transition: background-color 0.25s ease;
   line-break: normal;
+  color: var(--button-text);
 
   &:hover {
     background-color: var(--button-hover);
     color: var(--button-text-hover);
-  }
-
-  a {
-    color: var(--button-text);
   }
 }

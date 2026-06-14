@@ -70,18 +70,25 @@ $dark-button: #{$dark-fg};
 $dark-button-hover: #{$dark-accent};
 $dark-button-text: #{$dark-bg};
 $dark-button-text-hover: #{$dark-bg};
+
 @mixin dark-mode {
   :root[data-theme="dark"] & {
     @content;
   }
 }
+
 html {
   background: var(--bg);
   color: var(--fg);
   color-scheme: light;
 }
+
 html[data-theme="dark"] {
   color-scheme: dark;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 // Light mode

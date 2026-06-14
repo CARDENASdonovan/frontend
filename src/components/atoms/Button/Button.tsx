@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import "./Button.scss";
 
 interface ButtonProps {
@@ -6,8 +7,8 @@ interface ButtonProps {
 
 export const Button = ({ label }: ButtonProps): ReactElement => {
   return (
-    <div className="button">
-      <a>{label}</a>
-    </div>
+    <a className="button">
+      <div>{label}</div>
+    </a>
   );
 };
