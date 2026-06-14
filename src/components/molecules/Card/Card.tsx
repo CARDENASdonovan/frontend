@@ -1,16 +1,17 @@
+import { useTranslation } from "react-i18next";
 import "./Card.scss";
 
-export const Card = ({
-  title,
-  content,
-}: {
+export interface CardProps {
   title: string;
   content: string;
-}) => {
+}
+
+export const Card = ({ title, content }: CardProps) => {
+  const { t } = useTranslation();
   return (
     <div className="card">
-      <h2>{title}</h2>
-      <p>{content}</p>
+      <h2>{t(`${title}`)}</h2>
+      <p>{t(`${content}`)}</p>
     </div>
   );
 };
