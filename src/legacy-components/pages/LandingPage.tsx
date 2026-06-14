@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import AssetsInformationCards from "@/components/organisms/AssetsInformationCards";
-import ErrorScreen from "@/components/pages/ErrorScreen";
 import ExchangeRateCard from "@/components/organisms/ExchangeRateCard";
-import LoadingScreen from "@/components/pages/LoadingScreen";
 import MainTitle from "@/components/organisms/MainTitle";
 import SideMenu from "@/components/organisms/SideMenu";
+import ErrorScreen from "@/components/pages/ErrorScreen";
+import LoadingScreen from "@/components/pages/LoadingScreen";
 
 import type { AssetsInformationCardsProps } from "@/components/organisms/AssetsInformationCards";
 import type { ExchangeRateCardProps } from "@/components/organisms/ExchangeRateCard";
@@ -14,7 +14,7 @@ interface LandingPageProps {
   demo: boolean;
 }
 
-export default function App(props: LandingPageProps): React.ReactElement {
+export default function App(props: LandingPageProps): ReactElement {
   const [assetsData, setAssetData] = useState<AssetsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const queryParams = new URLSearchParams(window.location.search);

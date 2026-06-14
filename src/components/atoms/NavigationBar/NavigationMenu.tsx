@@ -1,6 +1,6 @@
 import "./NavigationMenu.scss";
 
-export const NavigationMenu = (): React.ReactElement => {
+export const NavigationMenu = (): ReactElement => {
   return (
     <div className="navigation-menu">
       <a>My Page</a>

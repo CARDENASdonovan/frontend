@@ -3,7 +3,7 @@ import { NavigationMenu } from "@/components/atoms/NavigationBar/NavigationMenu"
 import { UserInfo } from "@/components/molecules/UserInfo/UserInfo";
 import "./Header.scss";
 
-export const Header = (): React.ReactElement => {
+export const Header = (): ReactElement => {
   return (
     <nav className="header-container">
       <header className="header">

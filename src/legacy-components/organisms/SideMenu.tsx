@@ -6,7 +6,7 @@ import moneyLogo from "@/assets/money_logo.png";
 
 import "./SideMenu.scss";
 
-export default function SideMenu(): React.ReactElement {
+export default function SideMenu(): ReactElement {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 

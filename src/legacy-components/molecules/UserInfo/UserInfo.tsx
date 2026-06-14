@@ -7,7 +7,7 @@ interface UserInfoContentProps {
 
 const UserInfoContent = ({
   isUserLoggedIn,
-}: UserInfoContentProps): React.ReactElement => {
+}: UserInfoContentProps): ReactElement => {
   return isUserLoggedIn ? (
     <a href="/">a{/* <img src={cyStonksLogo} /> */}</a>
   ) : (
@@ -15,7 +15,7 @@ const UserInfoContent = ({
   );
 };
 
-export const UserInfo = (): React.ReactElement => {
+export const UserInfo = (): ReactElement => {
   // TODO: This should be replaced with actual logic to check user's login status.
   const isUserLoggedIn = false;
 

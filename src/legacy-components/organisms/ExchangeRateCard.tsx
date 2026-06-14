@@ -8,7 +8,7 @@ export interface ExchangeRateCardProps {
 
 export default function ExchangeRateCard(
   props: ExchangeRateCardProps
-): React.ReactElement {
+): ReactElement {
   const series = props.assets.map((asset) => ({
     x: asset.historicalPrices.map((price) => price.date),
     y: asset.historicalPrices.map((price) => price.price),

@@ -11,7 +11,7 @@ export const Card = ({ title, content }: CardProps) => {
   return (
     <div className="card">
       <h2>{t(`${title}`)}</h2>
-      <p>{t(`${content}`)}</p>
+      <p className="multiline-ellipsis">{t(`${content}`)}</p>
     </div>
   );
 };

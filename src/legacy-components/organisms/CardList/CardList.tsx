@@ -1,7 +1,7 @@
 import { Card } from "@/components/molecules/Card/Card";
 import "./CardList.scss";
 
-export const CardList = (): React.ReactElement => {
+export const CardList = (): ReactElement => {
   return (
     <div className="cards-container">
       <Card title="Card 1" content="This is the content of card 1." />

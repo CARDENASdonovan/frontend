@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import MainTitle from "@/components/organisms/MainTitle";
 import SideMenu from "@/components/organisms/SideMenu";
@@ -8,7 +8,7 @@ interface Portfolio {
   name: string;
 }
 
-export default function PortfolioPage(): React.ReactElement {
+export default function PortfolioPage(): ReactElement {
   const [portfolios, setPortfolios] = useState<Portfolio[]>([]);
   const [selectedPortfolio, setSelectedPortfolio] = useState<string>("");
   const [newPortfolioName, setNewPortfolioName] = useState<string>("");

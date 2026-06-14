@@ -5,7 +5,7 @@ interface ErrorPageProps {
   message: string;
 }
 
-export const ErrorPage = ({ message }: ErrorPageProps): React.ReactElement => {
+export const ErrorPage = ({ message }: ErrorPageProps): ReactElement => {
   const { t } = useTranslation();
   return (
     <div className="error-screen">

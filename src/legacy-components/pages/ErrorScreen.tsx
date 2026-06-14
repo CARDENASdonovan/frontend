@@ -1,8 +1,6 @@
 import "./ErrorScreen.scss";
 
-export default function ErrorScreen(props: {
-  message: string;
-}): React.ReactElement {
+export default function ErrorScreen(props: { message: string }): ReactElement {
   return (
     <div className="error-screen">
       <h1>CY Stonks</h1>

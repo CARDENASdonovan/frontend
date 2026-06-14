@@ -1,10 +1,9 @@
 import { ErrorPage } from "@/components/pages/ErrorPage/ErrorPage";
 import { LandingPage } from "@/components/pages/LandingPage/LandingPage";
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-export const RoutesList = (): React.ReactElement => {
+export const RoutesList = (): ReactElement => {
   const { t } = useTranslation();
 
   return (

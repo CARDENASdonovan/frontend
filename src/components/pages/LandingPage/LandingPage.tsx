@@ -3,7 +3,7 @@ import { Header } from "@/components/organisms/Header/Header";
 import { useTranslation } from "react-i18next";
 import "./LandingPage.scss";
 
-export const LandingPage = (): React.ReactElement => {
+export const LandingPage = (): ReactElement => {
   const { t } = useTranslation();
 
   return (

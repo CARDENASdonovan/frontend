@@ -4,7 +4,7 @@ interface ButtonProps {
   label: string;
 }
 
-export const Button = ({ label }: ButtonProps): React.ReactElement => {
+export const Button = ({ label }: ButtonProps): ReactElement => {
   return (
     <div className="button">
       <a>{label}</a>

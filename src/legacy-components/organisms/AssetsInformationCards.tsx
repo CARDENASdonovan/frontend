@@ -6,7 +6,7 @@ export interface AssetsInformationCardsProps {
 
 export default function AssetsInformationCards(
   props: AssetsInformationCardsProps
-): React.ReactElement {
+): ReactElement {
   return (
     <div className="flex-1/2 flex flex-col">
       <h2 className="text-xl text-center font-semibold">

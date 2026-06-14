@@ -1,24 +1,26 @@
-;
-import { VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup, VictoryLine, VictoryScatter, VictoryLegend, VictoryTooltip } from "victory";
 import _ from "lodash";
+import {
+  VictoryAxis,
+  VictoryChart,
+  VictoryGroup,
+  VictoryLegend,
+  VictoryLine,
+  VictoryScatter,
+  VictoryTheme,
+  VictoryTooltip,
+} from "victory";
 
 export interface ChartProps {
   series: {
-    x: number[] | string[],
-    y: number[],
-  }[],
-  name: string[]
+    x: number[] | string[];
+    y: number[];
+  }[];
+  name: string[];
 }
 
-const symbols = [
-  "circle",
-  "diamond",
-  "plus",
-  "square",
-  "triangleUp",
-];
+const symbols = ["circle", "diamond", "plus", "square", "triangleUp"];
 
-export default function Chart(props: ChartProps): React.ReactElement {
+export default function Chart(props: ChartProps): ReactElement {
   const series = props.series.map((serie) => {
     const data = serie.y.slice(0, 7).map((value, i) => ({
       x: serie.x[i] || "",
@@ -35,12 +37,15 @@ export default function Chart(props: ChartProps): React.ReactElement {
     };
   });
 
-  const minValue = Math.min(...series.map((serie) => Math.min(...serie.data.map((d) => d.y))));
-  const maxValue = Math.max(...series.map((serie) => Math.max(...serie.data.map((d) => d.y))));
+  const minValue = Math.min(
+    ...series.map((serie) => Math.min(...serie.data.map((d) => d.y)))
+  );
+  const maxValue = Math.max(
+    ...series.map((serie) => Math.max(...serie.data.map((d) => d.y)))
+  );
 
   return (
     <VictoryChart
-
       padding={{
         top: 20,
         left: 70,
@@ -65,10 +70,12 @@ export default function Chart(props: ChartProps): React.ReactElement {
       <VictoryAxis
         dependentAxis
         // label="Prix en euros"
-        tickValues={_.range(minValue - 10, maxValue + 10, Math.ceil((maxValue - minValue) / 5))}
-        tickFormat={(value) =>
-          `${value} €`
-        }
+        tickValues={_.range(
+          minValue - 10,
+          maxValue + 10,
+          Math.ceil((maxValue - minValue) / 5)
+        )}
+        tickFormat={(value) => `${value} €`}
         style={{
           axis: {
             stroke: "transparent",
@@ -87,11 +94,7 @@ export default function Chart(props: ChartProps): React.ReactElement {
         <VictoryGroup
           data={curreny_serie.data}
           key={i}
-          labelComponent={
-            <VictoryTooltip
-              style={{ fontSize: 10 }}
-            />
-          }
+          labelComponent={<VictoryTooltip style={{ fontSize: 10 }} />}
         >
           <VictoryLine
             style={{
@@ -119,9 +122,7 @@ export default function Chart(props: ChartProps): React.ReactElement {
           name: s.name,
           symbol: {
             fill: VictoryTheme.clean.palette?.qualitative?.[i] || "blue",
-            type: symbols[
-              series.indexOf(s)
-            ],
+            type: symbols[series.indexOf(s)],
           },
         }))}
         style={{
@@ -133,6 +134,6 @@ export default function Chart(props: ChartProps): React.ReactElement {
           },
         }}
       />
-    </VictoryChart >
+    </VictoryChart>
   );
 }

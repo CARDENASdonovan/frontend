@@ -1,6 +1,6 @@
 import "./Logo.scss";
 
-export const Logo = (): React.ReactElement => {
+export const Logo = (): ReactElement => {
   return (
     <div className="logo-container">
       <a className="logo" href="/">
