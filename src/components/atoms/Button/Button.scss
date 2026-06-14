@@ -1,0 +1,21 @@
+.button {
+  min-width: 50px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button);
+  color: var(--button-text);
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  transition: background-color 0.25s ease;
+  line-break: normal;
+
+  &:hover {
+    background-color: var(--button-hover);
+    color: var(--button-text-hover);
+  }
+}

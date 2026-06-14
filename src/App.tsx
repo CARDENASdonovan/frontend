@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import LandingPage from "@/components/pages/LandingPage";
 import LoginForm from "@/components/pages/LoginForm";
-import { NewPage } from "@/components/pages/NewPage";
 import TransactionPage from "@/components/pages/TransactionPage";
+import { NewPage } from "./components/pages/NewPage";
 
 interface LandingPageProps {
   demo: boolean;

@@ -15,8 +15,8 @@ $light-primary-text: #262626;
 $light-primary-text-unable: #51607a;
 $light-accent: #185b59;
 $light-accent-hover: #1847b7;
-$light-button-bg: #142033;
-$light-button-fg: #ffffff;
+$light-button: #312c3e;
+$light-button-hover: #584c70;
 $light-border: transparent;
 
 // Dark mode color palette reference
@@ -45,25 +45,38 @@ $light-border: transparent;
 // shirt shadow C6D6F2
 
 // Dark mode color variables
-$dark-bg: #312c3e;
-$dark-fg: #252c62;
-$dark-bg-elevated: #323b68;
-$dark-primary-text: #2c2d29;
-$dark-primary-text-unable: #7f8082;
-$dark-accent: #252c62;
-$dark-accent-hover: #151a35;
-$dark-button-bg: #142033;
-$dark-button-fg: #ffffff;
+// #584c70
+// #8a7da4
+// #fff
+// #25B390 or #00c9a3
 
-// Mixin for dark mode
+// #4E2362
+// #6D2F88
+// #8C3BAF
+// #A556C7
+// #B97CD5
+/////////////////////////////
+// #491F58
+// #682C7E
+// #8838A5
+// #A44CC4
+// #B871D2
+
+$dark-bg: #fff;
+$dark-fg: #b871d2;
+$dark-bg-elevated: #323b68;
+$dark-primary-text: #682c7e;
+$dark-secondary-text: #fff;
+$dark-accent: #8838a5;
+$dark-button: #8838a5;
+$dark-button-hover: #b871d2;
+$dark-button-text: #fff;
+$dark-button-text-hover: #fff;
+
 @mixin dark-mode {
   :root[data-theme="dark"] & {
     @content;
   }
-}
-
-* {
-  box-sizing: border-box;
 }
 
 html {
@@ -76,23 +89,16 @@ html[data-theme="dark"] {
   color-scheme: dark;
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-}
-
-// Light mode (default)
+// Light mode
 :root {
   --bg: #{$light-bg};
   --bg-elevated: #{$light-bg-elevated};
   --bg-header: #{$light-bg-header};
   --fg: #{$light-primary-text};
   --primary-text: #{$light-primary-text};
-  --primary-text-unable: #{$light-primary-text-unable};
   --accent: #{$light-accent};
-  --accent-hover: #{$light-accent-hover};
-  --button-bg: #{$light-button-bg};
-  --button-fg: #{$light-button-fg};
+  --button: #{$light-button};
+  --button-hover: #{$light-button-hover};
   --border: #{$light-border};
   font-family: $font-family;
 }
@@ -103,22 +109,13 @@ html[data-theme="dark"] {
   --bg-elevated: #{$dark-bg-elevated};
   --fg: #{$dark-fg};
   --primary-text: #{$dark-primary-text};
-  --primary-text-unable: #{$dark-primary-text-unable};
+  --secondary-text: #{$dark-secondary-text};
   --accent: #{$dark-accent};
-  --accent-hover: #{$dark-accent-hover};
-  --button-bg: #{$dark-button-bg};
-  --button-fg: #{$dark-button-fg};
+  --button: #{$dark-button};
+  --button-hover: #{$dark-button-hover};
+  --button-text: #{$dark-button-text};
+  --button-text-hover: #{$dark-button-text-hover};
   font-family: $font-family;
-}
-
-a {
-  font-weight: 500;
-  color: var(--accent);
-  text-decoration: inherit;
-
-  &:hover {
-    color: var(--accent-hover);
-  }
 }
 
 body {
@@ -126,35 +123,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: var(--bg);
-  color: var(--fg);
+  color: var(--primary-text);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: var(--button-bg);
-  color: var(--button-fg);
-  cursor: pointer;
-  transition:
-    border-color 0.25s,
-    background-color 0.25s,
-    color 0.25s;
+a {
+  text-decoration: none;
 
   &:hover {
-    border-color: var(--accent);
-  }
-
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    cursor: pointer;
   }
 }

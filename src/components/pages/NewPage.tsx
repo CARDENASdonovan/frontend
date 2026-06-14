@@ -1,24 +1,18 @@
-import { Card } from "@/components/molecules/Card";
-import Header from "@/components/organisms/Header";
-
+import { CardList } from "@/components/organisms/CardList/CardList";
+import { Header } from "@/components/organisms/Header";
 import "./NewPage.scss";
 
 export const NewPage = (): React.ReactElement => {
   return (
-    <div className="new-page">
+    <div className="new-page-container">
       <Header />
 
       <main>
         <h1>Welcome to the New Page</h1>
-        <p>
+        <h2>
           This is a new page in the application. You can add your content here.
-        </p>
-
-        <div className="cards-container">
-          <Card title="Card 1" content="This is the content of card 1." />
-          <Card title="Card 2" content="This is the content of card 2." />
-          <Card title="Card 3" content="This is the content of card 3." />
-        </div>
+        </h2>
+        <CardList />
       </main>
     </div>
   );

@@ -1,21 +1,22 @@
-import cyStonksLogo from "@/assets/cy_stonks_logo.png";
-
+import { Logo } from "@/components/atoms/Logo/Logo";
+import { NavigationMenu } from "@/components/atoms/NavigationBar/NavigationMenu";
+import { UserInfo } from "@/components/molecules/UserInfo/UserInfo";
 import "./Header.scss";
 
-const Logo = (): React.ReactElement => {
+export const Header = (): React.ReactElement => {
   return (
-    <div className="header-logo">
-      <a href="/">
-        <img src={cyStonksLogo} />
-      </a>
-    </div>
+    <nav className="header-container">
+      <header className="header">
+        <div className="header-left-container">
+          <Logo />
+        </div>
+        <div className="header-middle-container">
+          <NavigationMenu />
+        </div>
+        <div className="header-right-container">
+          <UserInfo />
+        </div>
+      </header>
+    </nav>
   );
 };
-
-export default function SideMenu(): React.ReactElement {
-  return (
-    <header className="header">
-      <Logo />
-    </header>
-  );
-}
