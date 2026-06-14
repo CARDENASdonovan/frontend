@@ -7,8 +7,10 @@ interface ButtonProps {
 
 export const Button = ({ label }: ButtonProps): ReactElement => {
   return (
-    <a className="button">
-      <div>{label}</div>
-    </a>
+    <div>
+      <a className="button">
+        <div>{label}</div>
+      </a>
+    </div>
   );
 };

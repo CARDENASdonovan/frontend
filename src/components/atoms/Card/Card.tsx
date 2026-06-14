@@ -10,11 +10,13 @@ export interface CardProps {
 export const Card = ({ name, description, url }: CardProps) => {
   const { t } = useTranslation();
   return (
-    <a href={url}>
-      <div className="card">
-        <h2>{t(`${name}`)}</h2>
-        <p className="multiline-ellipsis">{t(`${description}`)}</p>
-      </div>
-    </a>
+    <div>
+      <a href={url}>
+        <div className="card">
+          <h2>{t(`${name}`)}</h2>
+          <p className="multiline-ellipsis">{t(`${description}`)}</p>
+        </div>
+      </a>
+    </div>
   );
 };
