@@ -1,9 +1,11 @@
+import "./ServiceList.scss";
+
+import { ReactElement } from "react";
+
 import {
   CardList,
   CardListProps,
 } from "@/components/molecules/CardList/CardList";
-import { ReactElement } from "react";
-import "./ServiceList.scss";
 
 export const ServiceList = (): ReactElement => {
   const services: CardListProps["list"] = [

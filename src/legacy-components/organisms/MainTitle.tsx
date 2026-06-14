@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 import "./MainTitle.scss";
+
+import { useEffect, useState } from "react";
 
 export default function MainTitle(): ReactElement {
   const [username, setUsername] = useState<string | null>(null);

@@ -1,6 +1,8 @@
-import { Card, CardProps } from "@/components/atoms/Card/Card";
-import { ReactElement } from "react";
 import "./CardList.scss";
+
+import { ReactElement } from "react";
+
+import { Card, CardProps } from "@/components/atoms/Card/Card";
 
 export interface CardListProps {
   list: CardProps[];

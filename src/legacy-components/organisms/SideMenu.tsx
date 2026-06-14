@@ -1,10 +1,10 @@
+import "./SideMenu.scss";
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import cyStonksLogo from "@/assets/cy_stonks_logo.png";
 import moneyLogo from "@/assets/money_logo.png";
-
-import "./SideMenu.scss";
 
 export default function SideMenu(): ReactElement {
   const navigate = useNavigate();

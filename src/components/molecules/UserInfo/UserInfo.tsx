@@ -1,6 +1,8 @@
-import { Button } from "@/components/atoms/Button/Button";
-import { ReactElement } from "react";
 import "./UserInfo.scss";
+
+import { ReactElement } from "react";
+
+import { Button } from "@/components/atoms/Button/Button";
 
 interface UserInfoContentProps {
   isUserLoggedIn: boolean;

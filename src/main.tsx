@@ -1,8 +1,10 @@
-import { RoutesList } from "@/components/RoutesList";
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
 import "./i18n";
 import "./main.scss";
+
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+
+import { RoutesList } from "@/components/RoutesList";
 
 const colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 

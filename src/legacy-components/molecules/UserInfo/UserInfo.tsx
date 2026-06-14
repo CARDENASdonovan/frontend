@@ -1,5 +1,6 @@
-import { Button } from "@/components/atoms/Button/Button";
 import "./UserInfo.scss";
+
+import { Button } from "@/components/atoms/Button/Button";
 
 interface UserInfoContentProps {
   isUserLoggedIn: boolean;

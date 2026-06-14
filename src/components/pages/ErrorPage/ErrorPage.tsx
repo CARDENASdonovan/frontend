@@ -1,7 +1,9 @@
-import { VerticalPageLayout } from "@/components/page-layout/VerticalPageLayout/VerticalPageLayout";
+import "./ErrorPage.scss";
+
 import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
-import "./ErrorPage.scss";
+
+import { VerticalPageLayout } from "@/components/page-layout/VerticalPageLayout/VerticalPageLayout";
 
 interface ErrorPageProps {
   message: string;

@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 
+import type { AssetsInformationCardsProps } from "@/components/organisms/AssetsInformationCards";
 import AssetsInformationCards from "@/components/organisms/AssetsInformationCards";
+import type { ExchangeRateCardProps } from "@/components/organisms/ExchangeRateCard";
 import ExchangeRateCard from "@/components/organisms/ExchangeRateCard";
 import MainTitle from "@/components/organisms/MainTitle";
 import SideMenu from "@/components/organisms/SideMenu";
 import ErrorScreen from "@/components/pages/ErrorScreen";
 import LoadingScreen from "@/components/pages/LoadingScreen";
-
-import type { AssetsInformationCardsProps } from "@/components/organisms/AssetsInformationCards";
-import type { ExchangeRateCardProps } from "@/components/organisms/ExchangeRateCard";
 
 interface LandingPageProps {
   demo: boolean;

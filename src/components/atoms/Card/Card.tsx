@@ -1,5 +1,6 @@
-import { useTranslation } from "react-i18next";
 import "./Card.scss";
+
+import { useTranslation } from "react-i18next";
 
 export interface CardProps {
   name: string;

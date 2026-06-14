@@ -1,5 +1,5 @@
-import CurrentDate from "./CurrentDate"
-import CurrentTime from "./CurrentTime"
+import CurrentDate from "./CurrentDate";
+import CurrentTime from "./CurrentTime";
 
 export default function CurrentDateWidget() {
   return (
@@ -7,5 +7,5 @@ export default function CurrentDateWidget() {
       <CurrentDate />
       <CurrentTime />
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function CurrentTime() {
   const [current_time, setCurrentTime] = React.useState(new Date());
@@ -16,8 +16,6 @@ export default function CurrentTime() {
   }
 
   return (
-    <div className="current_time">
-      {current_time.toLocaleTimeString()}
-    </div>
+    <div className="current_time">{current_time.toLocaleTimeString()}</div>
   );
 }

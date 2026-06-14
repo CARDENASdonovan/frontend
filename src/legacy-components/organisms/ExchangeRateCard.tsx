@@ -1,6 +1,7 @@
+import "./ExchangeRateCard.scss";
+
 import Chart from "@/components/molecules/Chart";
 import { AssetsData } from "@/components/pages/LandingPage/LandingPage";
-import "./ExchangeRateCard.scss";
 
 export interface ExchangeRateCardProps {
   assets: AssetsData[];

@@ -1,5 +1,6 @@
-import { Card } from "@/components/atoms/Card/Card";
 import "./CardList.scss";
+
+import { Card } from "@/components/atoms/Card/Card";
 
 export const CardList = (): ReactElement => {
   return (

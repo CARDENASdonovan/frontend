@@ -1,9 +1,9 @@
-import { VictoryPie, VictoryTheme } from 'victory';
+import { VictoryPie, VictoryTheme } from "victory";
 
 const sampleData = [
   { x: "Cats", y: 35 },
   { x: "Dogs", y: 40 },
-  { x: "Birds", y: 25 }
+  { x: "Birds", y: 25 },
 ];
 
 export default function PieChart() {
@@ -19,30 +19,24 @@ export default function PieChart() {
                 return [
                   {
                     target: "data",
-                    mutation: ({
-                      style,
-                    }) => {
-                      return style.fill ===
-                        "#c43a31"
+                    mutation: ({ style }) => {
+                      return style.fill === "#c43a31"
                         ? null
                         : {
-                          style: {
-                            fill: "#c43a31",
-                          },
-                        };
+                            style: {
+                              fill: "#c43a31",
+                            },
+                          };
                     },
                   },
                   {
                     target: "labels",
-                    mutation: ({
-                      text,
-                    }) => {
-                      return text ===
-                        "clicked"
+                    mutation: ({ text }) => {
+                      return text === "clicked"
                         ? null
                         : {
-                          text: "clicked",
-                        };
+                            text: "clicked",
+                          };
                     },
                   },
                 ];

@@ -1,5 +1,6 @@
-import { CircularProgress } from "@mui/material";
 import "./LoadingScreen.scss";
+
+import { CircularProgress } from "@mui/material";
 
 export default function LoadingScreen() {
   return (

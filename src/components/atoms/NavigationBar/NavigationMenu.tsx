@@ -1,5 +1,6 @@
-import { ReactElement } from "react";
 import "./NavigationMenu.scss";
+
+import { ReactElement } from "react";
 
 export const NavigationMenu = (): ReactElement => {
   return (

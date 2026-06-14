@@ -1,4 +1,9 @@
-import { VictoryChart, VictoryTheme, VictoryBoxPlot, VictoryAxis } from 'victory';
+import {
+  VictoryAxis,
+  VictoryBoxPlot,
+  VictoryChart,
+  VictoryTheme,
+} from "victory";
 
 interface BoxPlotProps {
   boxWidth: number;
@@ -12,20 +17,22 @@ interface BoxPlotData {
   y: number[];
 }
 
-export default function BoxPlot({ boxWidth, data, horizontal, domainPadding }: BoxPlotProps) {
+export default function BoxPlot({
+  boxWidth,
+  data,
+  horizontal,
+  domainPadding,
+}: BoxPlotProps) {
   return (
     <VictoryChart
       domainPadding={domainPadding}
       theme={VictoryTheme.clean}
       horizontal={horizontal}
     >
-      <VictoryBoxPlot
-        boxWidth={boxWidth}
-        data={data}
-      />
+      <VictoryBoxPlot boxWidth={boxWidth} data={data} />
       <VictoryAxis
         dependentAxis
-      //orientation="right"
+        //orientation="right"
       />
     </VictoryChart>
   );

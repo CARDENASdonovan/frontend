@@ -1,8 +1,10 @@
-import { ServiceList } from "@/components/organisms/ServiceList/ServiceList";
-import { VerticalPageLayout } from "@/components/page-layout/VerticalPageLayout/VerticalPageLayout";
+import "./LandingPage.scss";
+
 import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
-import "./LandingPage.scss";
+
+import { ServiceList } from "@/components/organisms/ServiceList/ServiceList";
+import { VerticalPageLayout } from "@/components/page-layout/VerticalPageLayout/VerticalPageLayout";
 
 export const LandingPage = (): ReactElement => {
   const { t } = useTranslation();

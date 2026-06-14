@@ -1,6 +1,7 @@
+import { ReactElement } from "react";
+
 import { useFetch } from "@/hooks/fetchEndpoint";
 import { FreeDictionaryApiEntry } from "@/types/api/FreeDictonaryApi";
-import { ReactElement } from "react";
 
 export interface FreeDictionaryApiComponentProps {
   word: string;

@@ -1,7 +1,9 @@
+import "./DictionaryPage.scss";
+
+import { ReactElement } from "react";
+
 import { FreeDictionaryApiComponent } from "@/components/molecules/FreeDictionaryApiComponent/FreeDictionaryApiComponent";
 import { VerticalPageLayout } from "@/components/page-layout/VerticalPageLayout/VerticalPageLayout";
-import { ReactElement } from "react";
-import "./DictionaryPage.scss";
 
 export const DictionaryPage = (): ReactElement => {
   // const { t } = useTranslation();

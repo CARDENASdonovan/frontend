@@ -1,5 +1,6 @@
-import { ReactElement } from "react";
 import "./Logo.scss";
+
+import { ReactElement } from "react";
 
 export const Logo = (): ReactElement => {
   return (
