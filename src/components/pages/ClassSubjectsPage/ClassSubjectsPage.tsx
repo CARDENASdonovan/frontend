@@ -14,8 +14,8 @@ export const ClassSubjectsPage = (): ReactElement => {
       <div className="class-subjects-page">
         <main>
           <div className="title-container">
-            <h1>{t("title")}</h1>
-            <h2>{t("subtitle")}</h2>
+            <h1>{t("landing-page.title")}</h1>
+            <h2>{t("landing-page.subtitle")}</h2>
           </div>
           <div className="card-list-container">
             <ServiceList />

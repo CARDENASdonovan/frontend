@@ -1,15 +1,17 @@
 $header-height: 100px;
-$header-padding: 10px;
+$header-vertical-padding: 10px;
+$header-horizontal-padding: 30px;
 
 .header {
   height: $header-height;
-  padding: $header-padding;
+  padding: $header-vertical-padding $header-horizontal-padding;
   display: flex;
   position: sticky;
   top: 0;
   gap: 50px;
   font-size: x-large;
-  background-color: var(--bg);
+  background-color: var(--fg);
+  color: var(--primary-text);
 
   .header-left-container {
     min-width: $header-height;
@@ -27,6 +29,6 @@ $header-padding: 10px;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
   }
 }

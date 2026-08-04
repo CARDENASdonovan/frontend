@@ -1,21 +1,18 @@
 import "./LandingPage.scss";
 
 import { ReactElement } from "react";
-import { useTranslation } from "react-i18next";
 
+import { AboutMeSection } from "@/components/molecules/AboutMeSection/AboutMeSection";
 import { ServiceList } from "@/components/organisms/ServiceList/ServiceList";
 import { VerticalPageLayout } from "@/components/page-layout/VerticalPageLayout/VerticalPageLayout";
 
 export const LandingPage = (): ReactElement => {
-  const { t } = useTranslation();
-
   return (
     <VerticalPageLayout>
       <div className="landing-page">
         <main>
-          <div className="title-container">
-            <h1>{t("title")}</h1>
-            <h2>{t("subtitle")}</h2>
+          <div>
+            <AboutMeSection />
           </div>
           <div className="card-list-container">
             <ServiceList />

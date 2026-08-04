@@ -1,8 +1,10 @@
 {
-  "welcome": "Bienvenue",
-  "subtitle": "Quoicoubé",
+  "landing-page": {
+    "title": "Donovan Cardenas",
+    "subtitle": "Embedded Software Engineer and Full Stack Developer"
+  },
   "error": {
-    "notFound": "Page non trouvée"
+    "notFound": "Page not found"
   },
   "appTitle": "Quoicube",
   "cards": [{ "title": "Card 1", "content": "This is the content of card 1." }]

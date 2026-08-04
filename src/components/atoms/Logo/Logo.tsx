@@ -6,7 +6,7 @@ export const Logo = (): ReactElement => {
   return (
     <div className="logo-container">
       <a className="logo" href="/">
-        <div>{/* <img src={cyStonksLogo} alt="CyStonks Logo" /> */}</div>
+        <div>DC{/* <img src={cyStonksLogo} alt="CyStonks Logo" /> */}</div>
       </a>
     </div>
   );

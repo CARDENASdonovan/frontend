@@ -5,9 +5,9 @@
   min-width: 270px;
   box-sizing: border-box;
   border-radius: 0.5rem;
-  background-color: var(--button);
+  background-color: var(--fg);
   padding: 20px 30px 20px 30px;
-  color: var(--secondary-text);
+  color: var(--primary-text);
   transition: background-color 0.25s ease;
 
   &:hover {

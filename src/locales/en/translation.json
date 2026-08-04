@@ -1,6 +1,15 @@
 {
-  "welcome": "Welcome",
-  "subtitle": "Quoicube",
+  "landing-page": {
+    "title": "Donovan Cardenas",
+    "subtitle": "Embedded Software Engineer and Full Stack Developer",
+    "description": "I am a passionate software engineer."
+  },
+  "about-me": {
+    "full-name": "Donovan Cardenas",
+    "job-title": "Embedded Software Engineer and Full Stack Developer",
+    "subtitle": "Passionate about creating efficient and scalable solutions",
+    "description": "I am a passionate software engineer with experience in embedded systems and full-stack development. I enjoy creating efficient and scalable solutions, and I am always eager to learn new technologies and improve my skills."
+  },
   "error": {
     "notFound": "Page not found"
   },

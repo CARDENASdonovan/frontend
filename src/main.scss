@@ -9,11 +9,12 @@ $font-family:
 
 // Light mode color variables
 $light-bg: #ffffff;
+$light-mg: #ffffff;
+$light-fg: #ffffff;
 $light-bg-header: #323b68;
 $light-primary-text: #262626;
+$light-secondary-text: #262626;
 $light-primary-text-unable: #51607a;
-$light-accent: #185b59;
-$light-accent-hover: #1847b7;
 $light-button: #312c3e;
 $light-button-hover: #584c70;
 $light-border: transparent;
@@ -60,15 +61,22 @@ $light-border: transparent;
 // #8838A5
 // #A44CC4
 // #B871D2
+////////////////////////////
+// Black palette
+// #242424
+// #313131
+// #3e3e3e
+// #4b4b4b
+// #747474
 
-$dark-bg: #fff;
-$dark-fg: #333232;
-$dark-accent: #141414;
-$dark-primary-text: #{$dark-fg};
-$dark-secondary-text: #{$dark-bg};
+$dark-bg: #3e3e3e;
+$dark-mg: #313131;
+$dark-fg: #242424;
+$dark-primary-text: #e0e0e0;
+$dark-secondary-text: #999999;
 $dark-button: #{$dark-fg};
-$dark-button-hover: #{$dark-accent};
-$dark-button-text: #{$dark-bg};
+$dark-button-hover: #{$dark-mg};
+$dark-button-text: #{$dark-primary-text};
 $dark-button-text-hover: #{$dark-bg};
 
 @mixin dark-mode {
@@ -94,10 +102,10 @@ html[data-theme="dark"] {
 // Light mode
 :root {
   --bg: #{$light-bg};
-  --bg-header: #{$light-bg-header};
-  --fg: #{$light-primary-text};
+  --mg: #{$light-mg};
+  --fg: #{$light-fg};
   --primary-text: #{$light-primary-text};
-  --accent: #{$light-accent};
+  --secondary-text: #{$light-secondary-text};
   --button: #{$light-button};
   --button-hover: #{$light-button-hover};
   --border: #{$light-border};
@@ -107,10 +115,10 @@ html[data-theme="dark"] {
 // Dark mode
 :root[data-theme="dark"] {
   --bg: #{$dark-bg};
+  --mg: #{$dark-mg};
   --fg: #{$dark-fg};
   --primary-text: #{$dark-primary-text};
   --secondary-text: #{$dark-secondary-text};
-  --accent: #{$dark-accent};
   --button: #{$dark-button};
   --button-hover: #{$dark-button-hover};
   --button-text: #{$dark-button-text};
