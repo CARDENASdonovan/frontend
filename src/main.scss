@@ -1,142 +1,115 @@
-// Global typography
-$font-family:
-  Inter,
-  system-ui,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  sans-serif;
-
-// Light mode color variables
-$light-bg: #ffffff;
-$light-mg: #ffffff;
-$light-fg: #ffffff;
-$light-bg-header: #323b68;
-$light-primary-text: #262626;
-$light-secondary-text: #262626;
-$light-primary-text-unable: #51607a;
-$light-button: #312c3e;
-$light-button-hover: #584c70;
-$light-border: transparent;
-
-// Dark mode color palette reference
-// dark green 11646F
-// light green 25B390
-// light purple 584C70
-// dark purple 312C3E
-// light pink FDE6F6
-// dark pink D2A1C4
-// light skin color FAE8E1
-// dark skin color E0B7A2
-// light blue skirt 7296EF
-// dark blue skirt 2C47BD
-// blue shadow skirt 3247A8
-// light red skirt A01A4D
-// dark red skirt 84113E
-// black 2C2D29
-// light blue blazer 252C62
-// dark blue blazer 151A35
-// dark eyes green 022A2E
-// dark 2 eyes green 0A5359
-// bright eyes green 1BAEA1
-// bright 2 eyes green 99EDCA
-// dark yellow D5C541
-// light yellow FFFFCF
-// shirt shadow C6D6F2
-
-// Dark mode color variables
-// #584c70
-// #8a7da4
-// #fff
-// #25B390 or #00c9a3
-
-// #4E2362
-// #6D2F88
-// #8C3BAF
-// #A556C7
-// #B97CD5
-/////////////////////////////
-// #491F58
-// #682C7E
-// #8838A5
-// #A44CC4
-// #B871D2
-////////////////////////////
-// Black palette
-// #242424
-// #313131
-// #3e3e3e
-// #4b4b4b
-// #747474
-
-$dark-bg: #3e3e3e;
-$dark-mg: #313131;
-$dark-fg: #242424;
-$dark-primary-text: #e0e0e0;
-$dark-secondary-text: #999999;
-$dark-button: #{$dark-fg};
-$dark-button-hover: #{$dark-mg};
-$dark-button-text: #{$dark-primary-text};
-$dark-button-text-hover: #{$dark-bg};
-
-@mixin dark-mode {
-  :root[data-theme="dark"] & {
-    @content;
-  }
-}
-
-html {
-  background: var(--bg);
-  color: var(--fg);
+:root {
   color-scheme: light;
+
+  // Backgrounds / Surfaces
+  --bg-app: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f1f5f9;
+  --bg-header: #ffffff;
+
+  // Text colors
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  // Accents & Buttons
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --accent: #6366f1;
+
+  --btn-bg: #1e293b;
+  --btn-text: #ffffff;
+  --btn-hover-bg: #334155;
+  --btn-hover-text: #ffffff;
+
+  // Borders
+  --border-color: #e2e8f0;
+
+  // Compatibility aliases for existing components
+  --bg: var(--bg-app);
+  --fg: var(--bg-surface);
+  --primary-text: var(--text-primary);
+  --secondary-text: var(--text-secondary);
+  --button: var(--btn-bg);
+  --button-hover: var(--btn-hover-bg);
+  --button-text: var(--btn-text);
+  --button-text-hover: var(--btn-hover-text);
+  --border: var(--border-color);
 }
 
-html[data-theme="dark"] {
+[data-theme="dark"] {
   color-scheme: dark;
+
+  // Backgrounds / Surfaces
+  --bg-app: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-hover: #334155;
+  --bg-header: #1e293b;
+
+  // Text colors
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+
+  // Accents & Buttons
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+  --accent: #818cf8;
+
+  --btn-bg: #334155;
+  --btn-text: #f8fafc;
+  --btn-hover-bg: #475569;
+  --btn-hover-text: #ffffff;
+
+  // Borders
+  --border-color: #334155;
+
+  // Compatibility aliases for existing components
+  --bg: var(--bg-app);
+  --fg: var(--bg-surface);
+  --primary-text: var(--text-primary);
+  --secondary-text: var(--text-secondary);
+  --button: var(--btn-bg);
+  --button-hover: var(--btn-hover-bg);
+  --button-text: var(--btn-text);
+  --button-text-hover: var(--btn-hover-text);
+  --border: var(--border-color);
 }
 
 #root {
   min-height: 100vh;
 }
 
-// Light mode
-:root {
-  --bg: #{$light-bg};
-  --mg: #{$light-mg};
-  --fg: #{$light-fg};
-  --primary-text: #{$light-primary-text};
-  --secondary-text: #{$light-secondary-text};
-  --button: #{$light-button};
-  --button-hover: #{$light-button-hover};
-  --border: #{$light-border};
-  font-family: $font-family;
-}
-
-// Dark mode
-:root[data-theme="dark"] {
-  --bg: #{$dark-bg};
-  --mg: #{$dark-mg};
-  --fg: #{$dark-fg};
-  --primary-text: #{$dark-primary-text};
-  --secondary-text: #{$dark-secondary-text};
-  --button: #{$dark-button};
-  --button-hover: #{$dark-button-hover};
-  --button-text: #{$dark-button-text};
-  --button-text-hover: #{$dark-button-text-hover};
-  font-family: $font-family;
-}
-
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--bg);
-  color: var(--primary-text);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 a {
   text-decoration: none;
-  color: var(--primary-text);
+  color: var(--text-primary);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
 
   &:hover {
     cursor: pointer;

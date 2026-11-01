@@ -5,8 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="/assets/index-BNmsPNS5.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-7hdHVf1-.css">
+    <script>
+      (function () {
+        const stored = localStorage.getItem("app-theme");
+        const systemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme =
+          stored === "dark" || (!stored && systemDark) ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-D_yjsRHm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cqa3PZba.css">
   </head>
   <body>
     <div id="root"></div>

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { ClassSubjectsPage } from "@/components/pages/ClassSubjectsPage/ClassSubjectsPage";
 import { DictionaryPage } from "@/components/pages/DictionaryPage/DictionaryPage";

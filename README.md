@@ -1,6 +1,9 @@
 # Launch app
 
-npm run dev
+```bash
+pnpm install
+pnpm dev
+```
 
 # React + TypeScript + Vite
 

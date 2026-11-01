@@ -1,0 +1,24 @@
+// Dark mode color palette reference
+// dark green 11646F
+// light green 25B390
+// light purple 584C70
+// dark purple 312C3E
+// light pink FDE6F6
+// dark pink D2A1C4
+// light skin color FAE8E1
+// dark skin color E0B7A2
+// light blue skirt 7296EF
+// dark blue skirt 2C47BD
+// blue shadow skirt 3247A8
+// light red skirt A01A4D
+// dark red skirt 84113E
+// black 2C2D29
+// light blue blazer 252C62
+// dark blue blazer 151A35
+// dark eyes green 022A2E
+// dark 2 eyes green 0A5359
+// bright eyes green 1BAEA1
+// bright 2 eyes green 99EDCA
+// dark yellow D5C541
+// light yellow FFFFCF
+// shirt shadow C6D6F2

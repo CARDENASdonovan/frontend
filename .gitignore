@@ -21,6 +21,7 @@ pnpm-debug.log*
 
 # Local environment variables (NEVER commit secrets!)
 # -----------------------------------------------------------------------------
+.env
 .env.local
 .env.*.local
 

@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${VITE_PORT}:${VITE_PORT}"
+    command: sh -c "serve -s dist -l ${VITE_PORT}"
+    restart: unless-stopped

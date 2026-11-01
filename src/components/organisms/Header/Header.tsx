@@ -4,6 +4,7 @@ import { ReactElement } from "react";
 
 import { Logo } from "@/components/atoms/Logo/Logo";
 import { NavigationMenu } from "@/components/atoms/NavigationBar/NavigationMenu";
+import { ThemeToggle } from "@/components/atoms/ThemeToggle/ThemeToggle";
 import { UserInfo } from "@/components/molecules/UserInfo/UserInfo";
 
 export const Header = (): ReactElement => {
@@ -16,7 +17,8 @@ export const Header = (): ReactElement => {
         <div className="header-middle-container">
           <NavigationMenu />
         </div>
-        <div className="header-right-container">
+        <div className="header-right-container" style={{ gap: "16px" }}>
+          <ThemeToggle />
           <UserInfo />
         </div>
       </header>
