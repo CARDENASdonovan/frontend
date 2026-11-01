@@ -14,7 +14,7 @@ export const ThemeToggle = (): ReactElement => {
       aria-label="Toggle theme"
       className="theme-toggle-btn"
     >
-      {resolvedTheme === "dark" ? "🌙 Dark" : "☀️ Light"}
+      {resolvedTheme === "dark" ? "Dark" : "Light"}
     </button>
   );
 };

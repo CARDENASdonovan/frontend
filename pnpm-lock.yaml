@@ -208,68 +208,71 @@ importers:
   .:
     dependencies:
       "@emotion/react":
-        specifier: ^11.10.6
+        specifier: ^11.14.0
         version: 11.14.0(@types/react@19.3.0)(react@19.3.1)(supports-color@7.2.0)
       "@emotion/styled":
-        specifier: ^11.10.6
+        specifier: ^11.14.1
         version: 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1)(supports-color@7.2.0))(@types/react@19.3.0)(react@19.3.1)(supports-color@7.2.0)
       "@mui/material":
-        specifier: ^5.11.0
+        specifier: ^5.18.0
         version: 5.18.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1)(supports-color@7.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1)(supports-color@7.2.0))(@types/react@19.3.0)(react@19.3.1)(supports-color@7.2.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      "@tanstack/react-query":
+        specifier: ^5.105.0
+        version: 5.105.0(@types/react@19.3.0)(react@19.3.1)
       i18next:
         specifier: ^26.5.12
         version: 26.5.12(typescript@5.7.3)
       i18next-browser-languagedetector:
-        specifier: ^8.2.1
+        specifier: ^8.2.4
         version: 8.2.4
       react:
-        specifier: ^19.0.0
+        specifier: ^19.3.1
         version: 19.3.1
       react-dom:
-        specifier: ^19.0.0
+        specifier: ^19.3.1
         version: 19.3.1(react@19.3.1)
       react-i18next:
-        specifier: ^17.0.8
+        specifier: ^17.1.9
         version: 17.1.9(i18next@26.5.12(typescript@5.7.3))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@5.7.3)
       react-router-dom:
-        specifier: ^7.4.0
+        specifier: ^7.18.5
         version: 7.18.5(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       uuid:
-        specifier: ^11.1.0
+        specifier: ^11.1.1
         version: 11.1.1
       victory:
-        specifier: ^37.3.6
+        specifier: ^37.4.1
         version: 37.4.1(react@19.3.1)
     devDependencies:
       "@eslint/js":
-        specifier: ^9.21.0
+        specifier: ^9.39.5
         version: 9.39.5
       "@types/lodash":
-        specifier: ^4.17.16
+        specifier: ^4.17.27
         version: 4.17.27
       "@types/node":
-        specifier: ^25.9.3
+        specifier: ^25.9.9
         version: 25.9.9
       "@types/react":
-        specifier: ^19.0.10
+        specifier: ^19.3.0
         version: 19.3.0
       "@types/react-dom":
-        specifier: ^19.0.4
+        specifier: ^19.3.0
         version: 19.3.0(@types/react@19.3.0)
       "@vitejs/plugin-react":
-        specifier: ^4.3.4
+        specifier: ^4.7.0
         version: 4.7.0(supports-color@7.2.0)(vite@6.4.5(@types/node@25.9.9)(sass@1.107.1))
       eslint:
-        specifier: ^9.21.0
+        specifier: ^9.39.5
         version: 9.39.5(supports-color@7.2.0)
       eslint-config-prettier:
         specifier: ^10.1.8
         version: 10.1.8(eslint@9.39.5(supports-color@7.2.0))
       eslint-plugin-react-hooks:
-        specifier: ^5.1.0
+        specifier: ^5.2.0
         version: 5.2.0(eslint@9.39.5(supports-color@7.2.0))
       eslint-plugin-react-refresh:
-        specifier: ^0.4.19
+        specifier: ^0.4.26
         version: 0.4.26(eslint@9.39.5(supports-color@7.2.0))
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
@@ -278,19 +281,19 @@ importers:
         specifier: ^15.15.0
         version: 15.15.0
       prettier:
-        specifier: ^3.8.4
+        specifier: ^3.9.10
         version: 3.9.10
       sass:
-        specifier: ^1.80.0
+        specifier: ^1.107.1
         version: 1.107.1
       typescript:
-        specifier: ~5.7.2
+        specifier: ~5.7.3
         version: 5.7.3
       typescript-eslint:
-        specifier: ^8.24.1
+        specifier: ^8.72.1
         version: 8.72.1(eslint@9.39.5(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.7.3)
       vite:
-        specifier: ^6.2.0
+        specifier: ^6.4.5
         version: 6.4.5(@types/node@25.9.9)(sass@1.107.1)
 
 packages:
@@ -1360,6 +1363,24 @@ packages:
       }
     cpu: [x64]
     os: [win32]
+
+  "@tanstack/query-core@5.105.0":
+    resolution:
+      {
+        integrity: sha512-7p56vRmT/z4UJ6sctGIdl5WRUQyUv53IUpUwEKi2g97zMbO7zh8ZsCLffGAvCPBR4xD72e3VXsDyLwXHhoNTMQ==,
+      }
+
+  "@tanstack/react-query@5.105.0":
+    resolution:
+      {
+        integrity: sha512-y+hMuDERvgg6ay1da0V1a6ZC0ZONt7dELxSFkqRZuwm7p1TTZs0MoXrPlBRflIpRoYjvzQVYxycnLImpFLhWrw==,
+      }
+    peerDependencies:
+      "@types/react": ^18 || ^19
+      react: ^18 || ^19
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
 
   "@types/babel__core@7.20.5":
     resolution:
@@ -3714,6 +3735,15 @@ snapshots:
 
   "@rollup/rollup-win32-x64-msvc@4.67.2":
     optional: true
+
+  "@tanstack/query-core@5.105.0": {}
+
+  "@tanstack/react-query@5.105.0(@types/react@19.3.0)(react@19.3.1)":
+    dependencies:
+      "@tanstack/query-core": 5.105.0
+      react: 19.3.1
+    optionalDependencies:
+      "@types/react": 19.3.0
 
   "@types/babel__core@7.20.5":
     dependencies:

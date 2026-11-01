@@ -1,0 +1,167 @@
+.consumable-list-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .consumable-status {
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+
+    &.error {
+      color: #ef4444;
+      border-color: #fca5a5;
+      background-color: rgba(239, 68, 68, 0.05);
+    }
+  }
+
+  .consumable-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .consumable-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      border-color 0.15s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      border-color: var(--color-primary);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+
+      .item-name {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        word-break: break-word;
+      }
+
+      .category-badge {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        white-space: nowrap;
+
+        &.category-food {
+          background-color: rgba(34, 197, 94, 0.15);
+          color: #16a34a;
+        }
+
+        &.category-beverage {
+          background-color: rgba(59, 130, 246, 0.15);
+          color: #2563eb;
+        }
+
+        &.category-other {
+          background-color: rgba(168, 85, 247, 0.15);
+          color: #9333ea;
+        }
+      }
+    }
+
+    .item-description {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-color);
+
+      .stat-pill {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 90px;
+
+        .stat-label {
+          font-size: 0.75rem;
+          color: var(--text-muted);
+          text-transform: uppercase;
+          margin-bottom: 2px;
+        }
+
+        .stat-value {
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--text-primary);
+
+          &.price-highlight {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding-top: 6px;
+
+      .last-purchased {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .delete-btn {
+        background: transparent;
+        border: none;
+        color: #ef4444;
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        transition: background-color 0.15s ease;
+
+        &:hover {
+          background-color: rgba(239, 68, 68, 0.1);
+        }
+      }
+    }
+  }
+}
